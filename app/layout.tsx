@@ -17,8 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={twMerge(inter.className, "px-2 py-4 text-4xl")}>
-        <Navbar/>
+      <body
+        className={twMerge(inter.className, "px-2 py-4 text-4xl bg-slate-900")}
+      >
+        <Navbar />
         {children}
       </body>
     </html>

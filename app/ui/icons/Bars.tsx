@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
+import { Button } from "../button/Button";
 
 type BarsProps = {
   className?: string;
@@ -9,35 +10,35 @@ type BarsProps = {
 
 export const Bars = ({ className }: BarsProps): React.ReactElement => {
   const defaultClassName = twMerge(
-    "w-20  h-2 origin-bottom inline-block rounded-xl transition-all duration-1000 ease-in-out bg-black",
+    "w-3/4 h-2 origin-bottom inline-block rounded-xl transition-all duration-1000 ease-in-out bg-white",
     className
   );
 
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div
+    <Button
       onClick={() => setClicked((prev) => !prev)}
-      className="flex flex-col gap-2"
+      className="flex flex-col w-20 gap-2"
     >
       <span
-        className={defaultClassName}
+        className={twMerge(defaultClassName, clicked && "w-1/2")}
         style={{
-          transform: clicked ? "translate(8px, 0px) rotatez(45deg);" : "",
+          transform: clicked ? "translate(8px, 0px) rotatez(45deg)" : "",
         }}
       />
       <span
         className={twMerge(defaultClassName, "origin-top")}
         style={{
-          transform: clicked ? "rotatez(-45deg);" : "",
+          transform: clicked ? "rotateZ(-45deg) translate(3px, -1px)" : "",
         }}
       />
       <span
-        className={defaultClassName}
+        className={twMerge(defaultClassName, clicked && "w-1/2")}
         style={{
-          transform: clicked ? "translate(30px,-11px) rotatez(45deg);" : "",
+          transform: clicked ? "translate(30px,-10px) rotatez(45deg)" : "",
         }}
       />
-    </div>
+    </Button>
   );
 };
