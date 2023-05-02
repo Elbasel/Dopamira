@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 const Home = (): ReactNode => {
   return (
-    <main className="">
+    <main className="h-[80vh] overflow-hidden">
       <Image
         src="/dopamiraComingSoon.png"
         alt="coming soon logo"

@@ -10,7 +10,7 @@ type BarsProps = {
 
 export const Bars = ({ className }: BarsProps): React.ReactElement => {
   const defaultClassName = twMerge(
-    "w-3/4 h-2 origin-bottom inline-block rounded-xl transition-all duration-1000 ease-in-out bg-white",
+    "w-3/4 h-1 origin-bottom inline-block rounded-xl transition-all duration-1000 ease-in-out bg-white",
     className
   );
 
