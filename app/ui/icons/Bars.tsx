@@ -34,9 +34,9 @@ export const Bars = ({ className }: BarsProps): React.ReactElement => {
         }}
       />
       <span
-        className={twMerge(defaultClassName, clicked && "w-1/2")}
+        className={twMerge(defaultClassName, "w-[33%]")}
         style={{
-          transform: clicked ? "translate(30px,-10px) rotatez(45deg)" : "",
+          transform: clicked ? "translate(30px, -9px) rotateZ(45deg)" : "",
         }}
       />
     </Button>
