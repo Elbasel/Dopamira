@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 
-const Home = () => {
+const Home = (): ReactNode => {
   return (
     <main className="">
       <Image

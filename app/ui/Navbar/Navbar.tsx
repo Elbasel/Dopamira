@@ -5,7 +5,7 @@ type NavbarProps = {};
 
 export const Navbar = ({}: NavbarProps): React.ReactElement => {
   return (
-    <nav className="flex">
+    <nav className="flex py-4">
       <Bars />
     </nav>
   );
